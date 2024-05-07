@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>MOVA</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <header class="container">
+        <a href="" class="h_prev"><img src="imgs/ico_prev.png" alt="mova"></a>
+        <img class="h_mova_logo" src="imgs/logo_white.png" alt="mova">
+        <div>
+            <a href="" class="h_home"><img src="imgs/ico_home.png" alt="mova"></a>
+            <a href="" class="h_user"><img src="imgs/ico_user.png" alt="mova"></a>
+        </div>
+    </header>
+
+
+    <div class="content page06">
+      <article class="common">
+        <div class="box box01">
+            <h3>현재 보유 포인트</h3>
+            <h4>00,000 <span>Pt</span></h4>
+            <h5>충전 금액을 선택하세요</h5>
+        </div>
+        <div class="box box02">
+            <div class="box02_inn">
+                <div class="item on">
+                    <input type="radio" id="radio01" name="point" value="5000" checked />
+                    <label for="radio01">5,000 Pt</label>
+                </div>
+                <div class="item">
+                    <input type="radio" id="radio02" name="point" value="10000" />
+                    <label for="radio02">10,000 Pt</label>
+                </div>
+                <div class="item">
+                    <input type="radio" id="radio03" name="point" value="30000" />
+                    <label for="radio03">30,000 Pt</label>
+                </div>
+            </div>
+        </div>
+        <div class="box box03">
+            <div class="box_head">
+                <h3>
+                    <img src="imgs/logo.png" alt="mova">
+                    결제 방식
+                </h3>
+            </div>
+            <div class="payment_method">
+                <div class="payment_item">
+                    <input type="radio" id="payment01" name="paymentMethod" value="kakao" checked />
+                    <label for="payment01">카카오페이</label>
+                </div>
+                <div class="payment_item">
+                    <input type="radio" id="payment02" name="paymentMethod" value="kakao" />
+                    <label for="payment02">계좌 간편결제</label>
+                </div>
+                <div class="payment_item">
+                    <input type="radio" id="payment03" name="paymentMethod" value="kakao" />
+                    <label for="payment03">네이버페이</label>
+                </div>
+                <div class="payment_item">
+                    <input type="radio" id="payment04" name="paymentMethod" value="kakao" />
+                    <label for="payment04">휴대폰 결제</label>
+                </div>
+                <div class="payment_item">
+                    <input type="radio" id="payment05" name="paymentMethod" value="kakao" />
+                    <label for="payment05">일반 결제</label>
+                </div>
+                <div class="payment_item">
+                    <input type="radio" id="payment06" name="paymentMethod" value="kakao" />
+                    <label for="payment06">신용카드</label>
+                </div>
+            </div>
+        </div>
+        <button class="video_converter_btn">충전하기</button>
+      </article>
+    </div>
+
+
+    <footer class="white_footer">
+        <div class="f_link">
+            <a href=""><span>MOVA</span> 기본약관</a>
+            <a href="">서비스 이용약관</a>
+            <a href="">개인정보 처리방침</a>
+            <a href="">특정상거래</a>
+        </div>
+        <div class="foot_inn">
+            <div class="f_logo">
+                <img src="imgs/page03_f_logo.png" alt="mova">
+            </div>
+            <div class="f_info">
+                <div>
+                    <p>사업자등록번호 : 356-09-02748</p> <span>line</span>
+                    <p>대표자명 : 주호택</p> <span>line</span>
+                    <p>상호명 : 메타홍보</p>
+                </div>
+                <div>
+                    <p>사  업  장  주  소 :</p> 광주 북구 첨단과기로 123, 기업지원센터 S8, 314호
+                </div>
+                <span>altru0414@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".box02_inn .item").click(function() {
+                $(".box02_inn .item").removeClass('on');
+                $(this).addClass('on');
+            })
+            
+            // // 라디오 버튼 변경 이벤트
+            // $('.box02_inn input[type="radio"]').change(function() {
+            //     // 모든 아이템에서 on 클래스 제거
+            //     $('.item').removeClass('on');
+            //     // 체크된 라디오 버튼의 부모 아이템에 on 클래스 추가
+            //     $(this).closest('.item').addClass('on');
+            // });
+    
+            // // 페이지 로드 시 초기 체크된 라디오 버튼이 있을 경우에 대비하여 초기 설정
+            // $('.box02_inn input[type="radio"]:checked').each(function() {
+            //     $(this).closest('.item').addClass('on');
+            // });
+        });
+    </script>
+</html>
